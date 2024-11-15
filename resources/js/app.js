@@ -1,10 +1,14 @@
-import '../css/app.css';
-import './bootstrap';
+
+import 'bootstrap/dist/css/bootstrap.min.css'; // Estilos de Bootstrap
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // JavaScript de Bootstrap
 
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createApp, h } from 'vue';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
+
+
+import './sass/app.scss'; // Importa tu archivo Sass aquí
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 

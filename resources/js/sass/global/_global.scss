@@ -1,0 +1,69 @@
+@use '../global/variables' as v;
+
+
+a {
+    text-decoration: none;
+}
+
+* {
+    background-color: black;
+}
+
+.max-width {
+    max-width: unset;
+    margin: 0 auto;
+}
+
+.btn-green {
+    background-color: v.$green;
+    color: v.$white;
+    padding: .6rem 1.5rem !important;
+    border-radius: v.$border;
+    transition: all 0.3s ease;
+    border: none;
+
+}
+
+.btn-green:hover {
+    color: v.$white;
+    box-shadow: 0 0 10px rgba(56, 142, 60, 0.7); 
+}
+
+/* BTN - CLOSE */
+.btn-gray {
+    color: v.$white;
+    background-color: v.$gray;
+    border-radius: v.$border;
+    transition: all 0.3s ease; 
+    padding: .6rem 1.5rem !important;
+    border: none;
+
+}
+
+.btn-gray:hover {
+    box-shadow: 0 0 10px rgba(106, 107, 106, 0.7); 
+
+}
+
+
+
+/* ESTILOS SWEETALERT */
+.swal2-confirm {
+    background-color: v.$green !important;
+    color: v.$white !important;
+    border-color: v.$green !important;
+  }
+  
+
+
+  /* Asegura que la opacidad del backdrop sea 0 cuando se cierre el modal  MODAL.VUE*/
+.modal-backdrop.fade {
+    opacity: 0 !important;
+    pointer-events: none; /* Para que no sea interactuable */
+    transition: opacity 0.15s ease;
+}
+
+/* Esto es útil si no quieres que el backdrop se quede en el DOM */
+.modal-backdrop.modal-backdrop-hidden {
+    display: none !important;
+}
