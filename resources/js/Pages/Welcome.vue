@@ -1,12 +1,10 @@
 <script setup>
-import { Head, Link } from '@inertiajs/vue3';
-
-
 </script>
 
-<template>
-    <Head title="Inicio" />
-    
 
+
+<template>
     
+        <h1>hola</h1>
+
 </template>

@@ -1,0 +1,93 @@
+@use '../global/variables' as v;
+
+.header {
+    font-family: Arial, sans-serif;
+    background-color: v.$green;
+}
+
+/* Barra superior */
+.top-bar {
+    background-color: v.$green;
+    padding: 10px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .contact-info a,
+        .phone {
+            color: v;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    }
+}
+
+.contact-info .separator {
+    color: v.$white;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: v.$white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.social-icons a:hover {
+    color: v.$white;
+}
+
+/* Barra de navegación principal */
+.navbar {
+    background-color: v.$white;
+    padding: 10px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .row {
+            display: flex;
+            width: 100%;
+
+            .col-3 {
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    justify-content: flex-end;
+
+    li {
+        margin-left: 20px;
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+
+            &:hover {
+                color: v.$green;
+            }
+        }
+    }
+}
+
+
+.contact-info {
+    display: flex;
+    .icon {
+        display: flex;
+        gap: 1rem;
+        font-size: .8rem;
+    }
+}
