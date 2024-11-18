@@ -1,0 +1,181 @@
+.flipbox_area {
+    .container {
+        max-width: 1140px;
+        .nagative_margin {
+            position: relative;
+            margin-top: -100px;
+            z-index: 1;
+        }
+    }
+}
+
+.techno_flipbox {
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    z-index: 1;
+
+    &:hover .techno_flipbox_font {
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
+    }
+}
+
+.top_feature .techno_flipbox .techno_flipbox_font {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 0;
+}
+
+.techno_flipbox {
+    .techno_flipbox_font,
+    .techno_flipbox_back {
+        min-height: 250px;
+        height: auto;
+        box-shadow: 0px 1px 51.3px 5.7px rgba(137, 143, 156, 0.15);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: rotateX(0);
+        -webkit-transform: rotateX(0);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transition: transform 0.7s ease, -webkit-transform 0.7s ease;
+        position: relative;
+    }
+}
+
+.techno_flipbox {
+    .techno_flipbox_font,
+    .techno_flipbox_back {
+        min-height: 250px;
+        height: auto;
+        box-shadow: 0px 1px 51.3px 5.7px rgba(137, 143, 156, 0.15);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: rotateX(0);
+        -webkit-transform: rotateX(0);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transition: transform 0.7s ease, -webkit-transform 0.7s ease;
+        position: relative;
+    }
+}
+
+.top_feature .techno_flipbox .techno_flipbox_inner {
+    padding: 0 30px;
+}
+
+.techno_flipbox .techno_flipbox_inner {
+    text-align: center;
+    padding: 0 25px;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    perspective: inherit;
+    -webkit-perspective: inherit;
+    outline: transparent solid 1px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    z-index: 2;
+}
+
+.techno_flipbox_icon {
+    font-size: 45px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    overflow: hidden;
+}
+
+.top_feature .techno_flipbox .flipbox_title h3 {
+    font-size: 20px;
+    color: #232323;
+    font-weight: 700;
+    font-family: Muli;
+}
+
+.techno_flipbox .flipbox_title h3 {
+    font-size: 22px;
+    padding-bottom: 13px;
+    text-transform: capitalize;
+    -webkit-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    color: #fff;
+}
+
+.techno_flipbox:hover .techno_flipbox_back {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.top_feature .techno_flipbox .techno_flipbox_back {
+    background: #0a5624;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.techno_flipbox .techno_flipbox_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 2px;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.top_feature .techno_flipbox .techno_flipbox_inner {
+    padding: 0 30px;
+}
+
+.techno_flipbox .techno_flipbox_inner {
+    text-align: center;
+    padding: 0 25px;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    perspective: inherit;
+    -webkit-perspective: inherit;
+    outline: transparent solid 1px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    z-index: 2;
+}
+
+.techno_flipbox_icon {
+    font-size: 45px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    overflow: hidden;
+}
+
+.techno_flipbox_font .icon {
+    color: #fff;
+    font-size: 30px;
+    line-height: 80px;
+    height: 80px;
+    width: 80px;
+    background: #0d782c;
+    border-radius: 33% 66% 70% 30% / 49% 62% 38% 51% !important;
+    display: inline-block;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+}

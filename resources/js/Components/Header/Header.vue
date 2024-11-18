@@ -1,5 +1,6 @@
 <script setup>
 import logo from "@images/logo/logo-ayudante.svg";
+import { Link } from "@inertiajs/vue3";
 </script>
 
 <template>
@@ -10,45 +11,29 @@ import logo from "@images/logo/logo-ayudante.svg";
                 <!-- SOCIAL  -->
                 <div class="social-icons">
                     <span class="text-white"><b>Únete</b></span>
-                    <a
-                        href="https://www.facebook.com"
-                        target="_blank"
-                        class="social-icon"
-                    >
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
                         <i class="bi bi-facebook"></i>
                     </a>
-                    <a
-                        href="https://www.instagram.com"
-                        target="_blank"
-                        class="social-icon"
-                    >
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
                         <i class="bi bi-instagram"></i>
                     </a>
-                    <a
-                        href="https://www.linkedin.com"
-                        target="_blank"
-                        class="social-icon"
-                    >
+                    <a href="https://www.linkedin.com" target="_blank" class="social-icon">
                         <i class="bi bi-linkedin"></i>
                     </a>
                 </div>
 
                 <div class="contact-info">
-                    <a
-                        href="mailto:info@elayudante.es"
-                        class="email text-white icon"
-                    >
+                    <a href="mailto:info@elayudante.es" class="email text-white icon">
                         <i class="bi bi-envelope-at-fill"></i>
                         <span>info@elayudante.es</span>
                     </a>
                     <a href="" class="text-white icon">
-                      <i class="bi bi-geo-alt-fill"></i>
+                        <i class="bi bi-geo-alt-fill"></i>
                         <span>C/ Floranes, nº 23, local - entresuelo. </span>
                     </a>
                     <a href="" class="text-white icon">
-                      <i class="bi bi-telephone-fill"></i>
-                      <span class="phone">942 40 85 70</span>
-
+                        <i class="bi bi-telephone-fill"></i>
+                        <span class="phone">942 40 85 70</span>
                     </a>
                 </div>
             </div>
@@ -61,16 +46,14 @@ import logo from "@images/logo/logo-ayudante.svg";
                 <div class="row w-100">
                     <div class="col-3">
                         <div class="logo w-100">
-                            <img
-                                :src="logo"
-                                alt="ElAyudante"
-                                class="logo-img img-fluid"
-                            />
+                            <Link href="/">
+                            <img :src="logo" alt="ElAyudante" class="logo-img img-fluid" />
+                            </Link>
                         </div>
                     </div>
 
                     <!-- Menú de navegación -->
-                    <div class="col-9">
+                    <div class="col-9 nav-links">
                         <ul class="nav-links">
                             <li><a href="#">Nosotros</a></li>
                             <li><a href="#">Servicios</a></li>

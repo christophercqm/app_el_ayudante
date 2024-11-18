@@ -1,6 +1,30 @@
 @use '../global/variables' as v;
 
 
+/* FUENTE PERSONALIZADA */
+@font-face {
+    font-family: 'Muli';
+    src: url('/fonts/muli/Muli-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('/fonts/muli/Muli-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+
+
+
+
+
 a {
     text-decoration: none;
 }
@@ -64,3 +88,5 @@ a {
 .modal-backdrop.modal-backdrop-hidden {
     display: none !important;
 }
+
+
