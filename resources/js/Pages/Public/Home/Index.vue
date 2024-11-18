@@ -4,6 +4,9 @@ import Slider_1 from '@images/Home/slider-1.svg';
 import Slider_2 from '@images/Home/slider-2.webp';
 
 import FlipBox from '@/Components/Home/FlipBox.vue';
+import Asesoria from '@/Components/Home/Asesoria.vue';
+import Servicios from '@/Components/Home/Servicios.vue';
+import NuestraEsencia from '@/Components/Home/NuestraEsencia.vue';
 
 // Datos para las diapositivas
 const slides = [
@@ -13,12 +16,27 @@ const slides = [
 </script>
 
 <template>
-  <div class="container-home">
+  <div class="container-home w-100">
     <!-- Cambia el tiempo de avance con autoplayDelay -->
     <Slider :slides="slides" :autoplay="true" :loop="true" :autoplayDelay="5000" />
 
     <div class="flipbox-contain w-100">
       <FlipBox />
+    </div>
+
+
+    <!-- ASESORIA -->
+    <div class="contain-asesoria">
+      <Asesoria />
+    </div>
+
+    <!-- SERVICIOS -->
+    <div class="contain-servicios w-100">
+        <Servicios />
+    </div>
+
+    <div class="contain-nuestra-esencia">
+      <NuestraEsencia />
     </div>
     
   </div>

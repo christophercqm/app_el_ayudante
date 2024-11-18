@@ -19,7 +19,7 @@ const currentYear = new Date().getFullYear();
 
         <!-- Columna de Servicios -->
         <div class="col-md-3">
-          <h5 class="title">Servicios</h5>
+          <h5 class="title text-white">Servicios</h5>
           <ul class="d-flex flex-column gap-2">
             <li><a href="#" class="text-white">Gestión de Negocio</a></li>
             <li><a href="#" class="text-white">Comunicación & Marketing</a></li>
@@ -30,7 +30,7 @@ const currentYear = new Date().getFullYear();
 
         <!-- Columna de Contacto -->
         <div class="col-md-3">
-          <h5 class="title">Contacto</h5>
+          <h5 class="title text-white">Contacto</h5>
           <ul class="d-flex flex-column gap-2">
             <li><span>942 408 570</span></li>
             <li><a href="mailto:info@elayudante.es" class="text-white">info@elayudante.es</a></li>
@@ -40,7 +40,7 @@ const currentYear = new Date().getFullYear();
 
         <!-- Columna de Web Ecológica -->
         <div class="col-md-3 d-flex flex-column justify-center">
-          <h5 class="title">Sitio Web Ecológico</h5>
+          <h5 class="title text-white">Sitio Web Ecológico</h5>
           <div class="contain-green-icon">
             <!-- Coloca aquí la imagen del logo ecológico -->
             <img :src="green_icon" alt="Green Web Foundation" class="img-fluid green-icon" />

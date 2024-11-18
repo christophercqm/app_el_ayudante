@@ -1,0 +1,78 @@
+@use '../../global/variables' as v;
+
+.single_about_shape {
+    position: relative;
+}
+
+.bounce-animate {
+    animation-name: float-bob;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.single_about_shape_thumb {
+    position: absolute;
+    bottom: -25px;
+    z-index: -1;
+    left: -94px;
+}
+
+.single_about_shape_thumb img {
+    width: 70%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float-bobo {
+    animation: float 3s ease-in-out infinite;
+}
+
+.title-asesoria {
+    font-weight: 800 !important;
+    font-size: 2.59rem;
+
+    .green-text {
+        color: var(--green-weight);
+    }
+}
+
+.info-desc {
+    margin: 2rem 0;
+}
+
+
+
+.about_icon {
+    .icon {
+        .about_icon .icon {
+            font-size: 40px;
+            color: #0A5624;
+        }
+    }
+}
+
+.section_title {
+    .section_sub_title {
+        font-size: 16px;
+        color: v.$green;
+    }
+}
+
+
+
+.singel_about_left_inner {
+    h2 {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,101 @@
+@use "../../global/variables" as v;
+
+.section_title {
+    .single_it_work_content_list {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            right: -75px;
+            top: 26px;
+            height: 1px;
+            width: 130px;
+            content: "";
+            background: #ddd;
+        }
+    }
+}
+
+.single_it_work {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+
+    .circle {
+        background: #488f2b;
+        border-radius: 50%;
+        color: #fff;
+        font-weight: 600;
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        display: inline-block;
+        transition: 0.3s;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            height: 85px;
+            width: 85px;
+            content: "";
+            background: #aec825;
+            z-index: -1;
+            border-radius: 50%;
+            right: 0;
+            margin: auto;
+            opacity: 0.2;
+            transition: 0.3s;
+            z-index: 1;
+        }
+
+        &:after {
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            height: 65px;
+            width: 65px;
+            content: "";
+            background: #75b127;
+            z-index: -1;
+            border-radius: 50%;
+            right: 0;
+            margin: auto;
+            opacity: 0.4;
+            transition: 0.3s;
+            z-index: 1;
+        }
+    }
+}
+
+.single_work_content_title {
+    .title {
+        font-size: 1.25rem;
+    }
+}
+
+/* LINE */
+.single_it_work_content_list {
+    position: relative;
+    &::before {
+        position: absolute;
+        right: -75px;
+        top: 26px;
+        height: 1px;
+        width: 130px;
+        content: "";
+        background-color: v.$gray-line;
+    }
+}
+
+/*  CARDS */
+.row-services {
+    :nth-child(3) {
+        .single_it_work_content_list {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

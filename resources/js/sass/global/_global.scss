@@ -18,11 +18,23 @@
 
 body {
     font-family: 'Muli', sans-serif;
-    padding-top: 60px;  /* Ajusta la altura según el tamaño de tu navbar */
+    padding-top: 60px;
+    color: v.$text-gray;
 
 }
 
-
+h1, h2, h3, h4, h5, h6 {
+    color: #232323;
+    font-family: 'Muli', sans-serif;
+    font-style: normal;
+    margin-bottom: 0;
+    margin-top: 11px;
+    line-height: 1.2;
+    font-weight: 700;
+    -webkit-transition: .5s;
+    transition: .5s;
+    font-size: 36px;
+}
 
 
 ul {
@@ -34,11 +46,24 @@ a {
     text-decoration: none;
 }
 
+.subtitle {
+    font-size: 1rem;
+    color: #488F2B;
+    letter-spacing: .1rem;
+}
 
+.title {
+    text-align: center;
+    font-size: 2.55rem;
+}
 
 .max-width {
     max-width: unset;
     margin: 0 auto;
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 .btn-green {
@@ -48,7 +73,27 @@ a {
     border-radius: v.$border;
     transition: all 0.3s ease;
     border: none;
+}
 
+.btn-public {
+    background-color: v.$white;
+    color: v.$black;
+    padding: .5rem 1rem;
+    border-radius: v.$border;
+    transition: .5s ease-in-out;
+}
+
+.btn-public:hover {
+    color: v.$greenv2;
+
+}
+
+.green-text {
+    color: v.$greenv2 !important;
+}
+
+.bg-green {
+    background-color: v.$greenv2;
 }
 
 .btn-green:hover {
@@ -103,3 +148,6 @@ a {
         font-weight: 700;
     } 
 }
+
+
+
