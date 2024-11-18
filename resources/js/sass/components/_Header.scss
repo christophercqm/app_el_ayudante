@@ -6,8 +6,20 @@
     justify-content: space-between;
     width: 100%;
     padding: 0;
-    height: auto; /* Esto se puede ajustar si tienes una altura fija */
+    height: auto; 
     box-sizing: border-box;    background-color: v.$green;
+
+    /* POSICIÓN FIJA AL HACER SCROLL */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+    transition: top 0.3s ease-in-out; 
+    background-color: red; 
+
+
 }
 
 /* Barra superior */
@@ -24,7 +36,7 @@
         .phone {
             color: v;
             text-decoration: none;
-            margin-right: 10px;
+            margin-right: 2rem;
         }
     }
 }
@@ -38,6 +50,12 @@
     color: v.$white;
     text-decoration: none;
     margin-left: 15px;
+}
+
+.social-icons {
+    .unete {
+        font-size: 1.2rem;
+    }
 }
 
 .social-icons a:hover {
@@ -97,7 +115,7 @@
     display: flex;
     .icon {
         display: flex;
-        gap: 1rem;
+        gap: .3rem;
         font-size: 0.8rem;
     }
 }
