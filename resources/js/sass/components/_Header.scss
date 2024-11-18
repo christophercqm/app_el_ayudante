@@ -6,20 +6,51 @@
     justify-content: space-between;
     width: 100%;
     padding: 0;
-    height: auto; 
-    box-sizing: border-box;    background-color: v.$green;
+    height: auto;
+    box-sizing: border-box;
+    background-color: v.$green;
 
     /* POSICIÓN FIJA AL HACER SCROLL */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
-    transition: top 0.3s ease-in-out; 
-    background-color: red; 
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out;
 
+    .navbar {
+        background-color: v.$white;
 
+        .nav-links {
+            a {
+                position: relative;
+                padding-bottom: 5px;
+                color: v.$black;
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: v.$green;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: v.$green;
+                    transition: width 0.3s ease;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 /* Barra superior */
@@ -115,7 +146,7 @@
     display: flex;
     .icon {
         display: flex;
-        gap: .3rem;
+        gap: 0.3rem;
         font-size: 0.8rem;
     }
 }

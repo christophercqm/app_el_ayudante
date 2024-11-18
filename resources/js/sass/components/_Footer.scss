@@ -1,0 +1,45 @@
+@use "../global/variables" as v;
+
+.footer {
+  background-color: v.$blue;
+  color: white;
+
+  .title {
+    margin-bottom: 1rem;
+  }
+
+  .contain-green-icon {
+    img {
+      max-width: 170px;
+    }
+  }
+
+  ul {
+    li {
+      a {
+        position: relative;  
+        padding-bottom: 5px; 
+        transition: color .3s;
+
+        &:hover {
+          color: #488F2B; 
+        }
+
+        &::after {
+          content: '';  
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px; 
+          background-color: #488F2B; 
+          transition: width 0.3s ease; 
+        }
+
+        &:hover::after {
+          width: 100%; 
+        }
+      }
+    }
+  }
+}

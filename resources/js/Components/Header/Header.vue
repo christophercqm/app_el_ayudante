@@ -100,14 +100,14 @@ onBeforeUnmount(() => {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff; /* Fondo para la navbar */
+  background-color: #fff; 
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra debajo */
-  transition: top 0.3s ease-in-out; /* Suaviza la transición al cambiar de posición */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s ease-in-out; 
 }
 
 /* Para que el contenido no quede debajo del navbar */
 body {
-  padding-top: 60px; /* Ajusta esta altura según la altura de tu navbar */
+  padding-top: 60px; 
 }
 </style>
