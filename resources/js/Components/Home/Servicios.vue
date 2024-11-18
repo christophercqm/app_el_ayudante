@@ -53,7 +53,7 @@ const servicios = [
         <div class="row z-1 position-relative">
           <div class="col-lg-12">
             <div class="section_title text_center text-white">
-              <h6 class="text-center text-uppercase servicios-subtitle">servicios</h6>
+              <h6 class="subtitle text-uppercase text-center">servicios</h6>
               <h2 class="text-center text-white title mb-5">
                 Crea tu propia estrategia
               </h2>

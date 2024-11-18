@@ -1,45 +1,55 @@
 <script setup>
-import Slider from '@/Components/Home/Slider.vue';
-import Slider_1 from '@images/Home/slider-1.svg';
-import Slider_2 from '@images/Home/slider-2.webp';
+import Slider from "@/Components/Home/Slider.vue";
+import Slider_1 from "@images/Home/slider-1.svg";
+import Slider_2 from "@images/Home/slider-2.webp";
 
-import FlipBox from '@/Components/Home/FlipBox.vue';
-import Asesoria from '@/Components/Home/Asesoria.vue';
-import Servicios from '@/Components/Home/Servicios.vue';
-import NuestraEsencia from '@/Components/Home/NuestraEsencia.vue';
+import FlipBox from "@/Components/Home/FlipBox.vue";
+import Asesoria from "@/Components/Home/Asesoria.vue";
+import Servicios from "@/Components/Home/Servicios.vue";
+import NuestraEsencia from "@/Components/Home/NuestraEsencia.vue";
+import Contactanos from "@/Components/Home/Contactanos.vue";
 
 // Datos para las diapositivas
 const slides = [
-    { id: 1, image: Slider_1, alt: 'Slide 1', title: '' },
-    { id: 2, image: Slider_2, alt: 'Slide 2', title: '' },
+    { id: 1, image: Slider_1, alt: "Slide 1", title: "" },
+    { id: 2, image: Slider_2, alt: "Slide 2", title: "" },
 ];
 </script>
 
 <template>
-  <div class="container-home w-100">
-    <!-- Cambia el tiempo de avance con autoplayDelay -->
-    <Slider :slides="slides" :autoplay="true" :loop="true" :autoplayDelay="5000" />
+    <div class="container-home w-100">
+        <!-- Cambia el tiempo de avance con autoplayDelay -->
+        <Slider
+            :slides="slides"
+            :autoplay="true"
+            :loop="true"
+            :autoplayDelay="5000"
+        />
 
-    <div class="flipbox-contain w-100">
-      <FlipBox />
+        <div class="flipbox-contain w-100">
+            <FlipBox />
+        </div>
+
+        <!-- ASESORIA -->
+        <div class="contain-asesoria">
+            <Asesoria />
+        </div>
+
+        <!-- SERVICIOS -->
+        <div class="contain-servicios w-100">
+            <Servicios />
+        </div>
+
+        <!-- NUESTRA ESENCIA -->
+        <div class="contain-nuestra-esencia">
+            <NuestraEsencia />
+        </div>
+
+        <!-- CONTÁCTANOS -->
+        <div class="contain-contactanos w-100">
+            <Contactanos />
+        </div>
     </div>
-
-
-    <!-- ASESORIA -->
-    <div class="contain-asesoria">
-      <Asesoria />
-    </div>
-
-    <!-- SERVICIOS -->
-    <div class="contain-servicios w-100">
-        <Servicios />
-    </div>
-
-    <div class="contain-nuestra-esencia">
-      <NuestraEsencia />
-    </div>
-    
-  </div>
 </template>
 
 <style scoped>
@@ -54,17 +64,16 @@ const slides = [
 
 .swiper-container {
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 
 .slider-image {
     width: 100%;
-    height: 100%; 
-    object-fit: cover; 
+    height: 100%;
+    object-fit: cover;
 }
 
 .flipbox-contain {
-  z-index: 1;
+    z-index: 1;
 }
-
 </style>
