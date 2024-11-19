@@ -8,6 +8,7 @@ import Asesoria from "@/Components/Home/Asesoria.vue";
 import Servicios from "@/Components/Home/Servicios.vue";
 import NuestraEsencia from "@/Components/Home/NuestraEsencia.vue";
 import Contactanos from "@/Components/Home/Contactanos.vue";
+import NuestrosProyectos from "@/Components/Home/NuestrosProyectos.vue";
 
 // Datos para las diapositivas
 const slides = [
@@ -45,10 +46,16 @@ const slides = [
             <NuestraEsencia />
         </div>
 
+        <div class="contain-proyectos">
+            <NuestrosProyectos />
+        </div>
+
         <!-- CONTÁCTANOS -->
         <div class="contain-contactanos w-100">
             <Contactanos />
         </div>
+
+       
     </div>
 </template>
 

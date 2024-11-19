@@ -1,6 +1,6 @@
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Pagination } from "swiper/modules"; // Eliminamos Navigation
+import { Autoplay, Pagination } from "swiper/modules"; 
 import "swiper/css"; // Estilos básicos
 import "swiper/css/pagination"; // Estilos de paginación
 
