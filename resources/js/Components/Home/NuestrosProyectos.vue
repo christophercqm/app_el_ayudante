@@ -100,7 +100,7 @@ onBeforeUnmount(() => {
                     <h2 class="subtitle text-uppercase text-center">
                         portfolio
                     </h2>
-                    <h2 class="title mb-5">
+                    <h2 class="title mb-0">
                         Descubre nuestros<br />
                         últimos proyectos
                     </h2>
