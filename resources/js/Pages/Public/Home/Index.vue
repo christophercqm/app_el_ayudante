@@ -1,7 +1,5 @@
 <script setup>
 import Slider from "@/Components/Home/Slider.vue";
-import Slider_1 from "@images/Home/slider-1.svg";
-import Slider_2 from "@images/Home/slider-2.webp";
 
 import FlipBox from "@/Components/Home/FlipBox.vue";
 import Asesoria from "@/Components/Home/Asesoria.vue";
@@ -10,11 +8,12 @@ import NuestraEsencia from "@/Components/Home/NuestraEsencia.vue";
 import Contactanos from "@/Components/Home/Contactanos.vue";
 import NuestrosProyectos from "@/Components/Home/NuestrosProyectos.vue";
 
-// Datos para las diapositivas
-const slides = [
-    { id: 1, image: Slider_1, alt: "Slide 1", title: "" },
-    { id: 2, image: Slider_2, alt: "Slide 2", title: "" },
-];
+
+// Recibe las props del controlador (Inertia)
+const props = defineProps({
+  proyectos: Array,
+});
+
 </script>
 
 <template>
@@ -47,7 +46,7 @@ const slides = [
         </div>
 
         <div class="contain-proyectos">
-            <NuestrosProyectos />
+            <NuestrosProyectos :proyectos="proyectos" />
         </div>
 
         <!-- CONTÁCTANOS -->

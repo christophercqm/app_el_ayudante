@@ -1,95 +1,48 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount  } from 'vue';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay, Pagination } from 'swiper/modules'; 
+import { ref, onMounted, onBeforeUnmount } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Autoplay, Pagination } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/pagination"; 
+import "swiper/css/pagination";
 
-import hostelSantander from "@images/Proyectos/hostelSantander.webm";
-import lopez_alonso from "@images/Proyectos/lopez-alonso.webp";
-import avenida_farmacia from "@images/Proyectos/avenida-farmacia.webp";
-import trofeos_sport from "@images/Proyectos/trofeosSport.webm";
-import logopedas from "@images/Proyectos/logopedasCantabria.webm";
-import sainz from "@images/Proyectos/saizFisioterapia.webm";
-import la_puchera from "@images/Proyectos/laPuchera.webp";
+// Recibe las props del componente padre
+const props = defineProps({
+    proyectos: Array,
+});
 
-const caseStudies = [
-    {
-        title: "Hostel Santander",
-        media: hostelSantander,
-        type: "video",
-        description: "Web",
-        link: "#",
-    },
-    {
-        title: "LópezAlonso Inmobiliaria",
-        media: lopez_alonso,
-        type: "image",
-        description: "Branding, Web",
-        link: "https://lopezalonsoinmobiliaria.com/",
-    },
-    {
-        title: "Farmacia La Avenida",
-        media: avenida_farmacia,
-        type: "image",
-        description: "Branding, Web",
-        link: "#",
-    },
-    {
-        title: "Trofeos Sport",
-        media: trofeos_sport,
-        type: "video",
-        description: "Branding, Web, RRSS",
-        link: "https://trofeossport.es/",
-    },
-    {
-        title: "Logopedas Cantabria",
-        media: logopedas,
-        type: "video",
-        description: "Branding, Web, Animación",
-        link: "https://www.logopedascantabria.org/",
-    },
-    {
-        title: "SAIZ Fisioterapia",
-        media: sainz,
-        type: "video",
-        description: "Branding, Web, RRSS",
-        link: "https://saizfisioterapia.com/",
-    },
-    {
-        title: "La Puchera",
-        media: la_puchera,
-        type: "image",
-        description: "Web, Rotulación, Packaging, Papelería",
-        link: "https://lapucheratradicional.es/",
-    },
-];
+console.log(props.proyectos); // Verificar que se reciben correctamente
 
-const slidesPerView = ref(1); // Definir el valor inicial de slidesPerView
+// Responsividad del slider
+const slidesPerView = ref(1);
 
-// Calcular cuántas imágenes caben en la pantalla
 const updateSlidesPerView = () => {
     const width = window.innerWidth;
     if (width > 1200) {
-        slidesPerView.value = 4; // 4 imágenes para pantallas grandes
+        slidesPerView.value = 4; // Pantallas grandes
     } else if (width > 768) {
-        slidesPerView.value = 3; // 3 imágenes para tablets
+        slidesPerView.value = 3; // Tablets
     } else {
-        slidesPerView.value = 1; // 1 imagen para móviles
+        slidesPerView.value = 1; // Móviles
     }
 };
 
-// Llamar a la función para ajustar los slides al cargar la página
 onMounted(() => {
     updateSlidesPerView();
-    window.addEventListener('resize', updateSlidesPerView);
+    window.addEventListener("resize", updateSlidesPerView);
 });
 
-// Eliminar el listener de evento al destruir el componente
 onBeforeUnmount(() => {
-    window.removeEventListener('resize', updateSlidesPerView);
+    window.removeEventListener("resize", updateSlidesPerView);
 });
+
+// Función para determinar si el archivo es un video o una imagen
+const isVideo = (file) => {
+    if (!file || typeof file !== "string") return false; // Verifica si el archivo es válido
+    const videoExtensions = ["webm", "mp4"]; // Extensiones de video permitidas
+    const extension = file.split(".").pop().toLowerCase(); // Extraer la extensión
+    return videoExtensions.includes(extension);
+};
 </script>
 
 <template>
@@ -117,24 +70,44 @@ onBeforeUnmount(() => {
                 pagination
                 effect="slide"
             >
-                <SwiperSlide v-for="(study, index) in caseStudies" :key="index">
-                    <a :href="study.link || '#'" class="single_case_study" target="_blank">
+                <!-- Renderizamos los proyectos dinámicamente -->
+                <SwiperSlide
+                    v-for="(proyecto, index) in proyectos"
+                    :key="index"
+                >
+                    <a
+                        :href="proyecto.enlace || '#'"
+                        class="single_case_study"
+                        target="_blank"
+                    >
                         <div class="single_case_study_inner">
                             <div class="single_case_study_thumb">
-                                <template v-if="study.type === 'video'">
+                                <!-- Si es video -->
+                                <template
+                                    v-if="
+                                        proyecto.link &&
+                                        isVideo(proyecto.link)
+                                    "
+                                >
                                     <video width="100%" autoplay loop muted>
-                                        <source :src="study.media" type="video/webm" />
+                                        <source
+                                            :src="`/${proyecto.link}`"
+                                            type="video/webm"
+                                        />
                                     </video>
                                 </template>
-                                <template v-else-if="study.type === 'image'">
-                                    <img :src="study.media" :alt="study.title" />
+                                <template v-else-if="proyecto.link">
+                                    <img
+                                        :src="`/${proyecto.link}`"
+                                        :alt="proyecto.titulo"
+                                    />
                                 </template>
                             </div>
                         </div>
                         <div class="single_case_study_content">
                             <div class="single_case_study_content_inner">
-                                <h2>{{ study.title }}</h2>
-                                <span>{{ study.description }}</span>
+                                <h2>{{ proyecto.titulo }}</h2>
+                                <span>{{ proyecto.description }}</span>
                             </div>
                         </div>
                     </a>
@@ -143,3 +116,21 @@ onBeforeUnmount(() => {
         </div>
     </div>
 </template>
+
+<style scoped>
+.container-proyectos {
+    padding: 50px 0;
+}
+
+.single_case_study {
+    text-decoration: none;
+    color: inherit;
+}
+
+.single_case_study_thumb img,
+.single_case_study_thumb video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+</style>
