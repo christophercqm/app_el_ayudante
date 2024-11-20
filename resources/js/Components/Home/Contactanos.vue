@@ -4,7 +4,6 @@ import isotipoAyudanteBlanco from "@images/logo/logo-white-isotipo.svg";
 
 const contacto = {
   titulo: "Contáctanos",
-  subtitulo: "Toda la información que necesites en el",
   telefono: "942 408 570",
   botonTexto: "Déjate Ayudar",
   botonEnlace: "contacto.html",
@@ -17,9 +16,9 @@ const contacto = {
     :style="{ backgroundImage: `url(${bgContactanos})` }"
   >
     <div class="container">
-      <div class="row">
+      <div class="row d-flex justify-content-center">
         <!-- Imagen -->
-        <div class="col-lg-4 px-5 d-flex iso-ayu align-items-center justify-content-center">
+        <div class="col-4  px-5 d-flex iso-ayu align-items-center justify-content-center">
           <img
             :src="isotipoAyudanteBlanco"
             class="img-fluid p-5"
@@ -28,14 +27,16 @@ const contacto = {
         </div>
 
         <!-- Información de contacto -->
-        <div class="col-lg-8 section_title text-left m-auto px-5">
+        <div class="col-5 section_title text-left px-5">
           <!-- Título -->
           <div class="phone_number mb-3">
             <h5 class="subtitle text-uppercase">{{ contacto.titulo }}</h5>
           </div>
           <!-- Subtítulo y Teléfono -->
           <div class="section_main_title">
-            <h2 class="text-white desc">{{ contacto.subtitulo }}</h2>
+            <h2 class="text-white desc">
+              Toda la información<br />que necesites en el,
+            </h2>
             <h2 class="text-highlight text-white">{{ contacto.telefono }}</h2>
           </div>
           <!-- Botón -->

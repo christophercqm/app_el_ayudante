@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProyectosController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -28,6 +29,14 @@ Route::middleware('auth')->group(function () {
   Route::post('/proyectos/{proyecto}', [ProyectosController::class, 'update'])->name('admin.proyectos.update');  // Actualizar proyecto
   Route::delete('/proyectos/{proyecto}', [ProyectosController::class, 'destroy'])->name('admin.proyectos.destroy');  // Eliminar proyecto});
 
+
+    // Rutas para Blogs
+    Route::get('/admin/blogs', [BlogController::class, 'index'])->name('admin.blogs.index'); // Mostrar la lista de blogs
+    Route::get('/admin/blogs/create', [BlogController::class, 'create'])->name('admin.blogs.create'); // Mostrar formulario para crear blog
+    Route::post('/admin/blogs', [BlogController::class, 'store'])->name('admin.blogs.store'); // Almacenar nuevo blog
+    Route::get('/admin/blogs/{slug}/edit', [BlogController::class, 'edit'])->name('admin.blogs.edit'); // Mostrar formulario de edición
+    Route::post('/admin/blogs/{slug}', [BlogController::class, 'update'])->name('admin.blogs.update'); // Actualizar blog
+    Route::delete('/admin/blogs/{slug}', [BlogController::class, 'destroy'])->name('admin.blogs.destroy'); // Eliminar blog
 });
 
 require __DIR__.'/auth.php';

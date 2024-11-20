@@ -36,6 +36,13 @@ const showingNavigationDropdown = ref(false);
           >
             Proyectos
           </Link>
+          <Link
+            :href="route('admin.blogs.index')"
+            :active="route().current('admin.blogs.index')"
+            class="text-white py-2"
+          >
+            Blog
+          </Link>
         </div>
       </div>
     </div>

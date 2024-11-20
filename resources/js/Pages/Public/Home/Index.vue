@@ -8,11 +8,16 @@ import NuestraEsencia from "@/Components/Home/NuestraEsencia.vue";
 import Contactanos from "@/Components/Home/Contactanos.vue";
 import NuestrosProyectos from "@/Components/Home/NuestrosProyectos.vue";
 import Resenias from "@/Components/Home/Resenias.vue";
+import Blog from "@/Components/Home/Blog.vue";
+
 
 // Recibe las props del controlador (Inertia)
 const props = defineProps({
   proyectos: Array,
+  blogs: Array,
 });
+
+console.log(props.blogs);
 
 </script>
 
@@ -56,6 +61,10 @@ const props = defineProps({
 
         <div class="contain-resenias">
             <Resenias />
+        </div>
+
+        <div class="contain-blog"> <!-- 3 ÚLTIMA PUBLICACIONES -->
+            <Blog :blogs="blogs" />
         </div>
        
     </div>

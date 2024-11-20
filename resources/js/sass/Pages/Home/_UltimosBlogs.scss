@@ -1,0 +1,120 @@
+.single_blog_thumb {
+    img {
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+.blog_page_button {
+    transition: 0.5s;
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.title-blog {
+    font-size: 1.3rem;
+}
+
+.btn-green {
+    font-size: 1.1rem;
+}
+
+
+.blog_area {
+    padding: 3rem 0;
+  
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      .col-lg-4 {
+        display: flex; 
+        flex-direction: column;
+      }
+    }
+  
+    .single_blog {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column; 
+      justify-content: space-between;
+      height: 100%;
+  
+      .single_blog_thumb {
+        img {
+          width: 100%;
+          border-radius: 10px 10px 0 0;
+          object-fit: cover;
+        }
+      }
+  
+      .single_blog_content {
+        padding: 1rem;
+        flex-grow: 1;
+  
+        .techno_blog_meta {
+          font-size: 0.9rem;
+          color: #999;
+          margin-bottom: 0.5rem;
+  
+          .author {
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+  
+          .meta-date {
+            font-style: italic;
+          }
+        }
+  
+  
+        .blog_description {
+          font-size: 0.95rem;
+          line-height: 1.6;
+          color: #666;
+          margin-bottom: 1rem;
+        }
+  
+        .blog_page_button {
+          a {
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #007bff;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+  
+          .bi {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  
+    .section_button {
+      text-align: center;
+      margin-top: 3rem;
+  
+      .btn-green {
+        display: inline-block;
+        padding: .8rem 1.6rem !important;
+        font-size: 1rem;
+        background-color: #28a745;
+        text-decoration: none;
+        font-weight: bold;
+  
+      }
+    }
+  }
+  

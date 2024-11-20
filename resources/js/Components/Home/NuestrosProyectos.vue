@@ -11,7 +11,6 @@ const props = defineProps({
     proyectos: Array,
 });
 
-console.log(props.proyectos); // Verificar que se reciben correctamente
 
 // Responsividad del slider
 const slidesPerView = ref(1);
