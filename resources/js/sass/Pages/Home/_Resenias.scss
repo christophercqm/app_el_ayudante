@@ -1,0 +1,193 @@
+@keyframes rotateSlightlyClockwise {
+    0% {
+      transform: rotate(0deg) translate(-10px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(350deg) translate(-10px) rotate(-350deg);
+    }
+  }
+  
+  @keyframes rotateSlightlyCounterClockwise {
+    0% {
+      transform: rotate(0deg) translate(10px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(-350deg) translate(10px) rotate(350deg);
+    }
+  }
+  
+  // Estilos para las imágenes flotantes
+  .floating-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .floating-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px; // Espacio entre las imágenes
+    background-color: white;  // Fondo blanco
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  // Box-shadow sutil
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 30s; // Duración de la animación ajustada a 30 segundos
+    animation-delay: 0s; // No hay retraso aleatorio para la animación
+    transform-origin: center;
+  }
+  
+  .floating-image:nth-child(odd) {
+    animation-name: rotateSlightlyClockwise;
+  }
+  
+  .floating-image:nth-child(even) {
+    animation-name: rotateSlightlyCounterClockwise;
+  }
+  
+  .floating-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.2);  // Escala de la imagen
+    transition: transform 0.5s ease-in-out; // Transición suave para el efecto de hover
+  }
+  
+  .floating-image:hover img {
+    transform: scale(1.25);  // Aumenta el tamaño ligeramente cuando se pasa el mouse
+  }
+  
+  .empty-circle {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+  }
+  
+
+
+  /* TESTIMONIALS */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  // Estilos para las citas de los testimonios
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Empezamos desde abajo */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Terminamos en su posición original */
+    }
+  }
+  
+  @keyframes fadeOutDown {
+    0% {
+      opacity: 1;
+      transform: translateY(0); /* En su posición original */
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px); /* Desaparece moviéndose hacia abajo */
+    }
+  }
+  
+  // Estilos generales para los testimonios
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Comienza desde abajo */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Mueve hacia su posición final */
+    }
+  }
+  
+  @keyframes fadeOutDown {
+    0% {
+      opacity: 1;
+      transform: translateY(0); /* Comienza desde su posición actual */
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px); /* Mueve hacia abajo y desaparece */
+    }
+  }
+  
+  .quote {
+    position: absolute; /* Apilamos los testimonios uno sobre otro */
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    opacity: 0; /* Todos los testimonios son invisibles por defecto */
+  }
+  
+  .quote-enter {
+    animation: fadeInUp 1s ease-out forwards; /* Testimonio entra con efecto fade-in-up */
+  }
+  
+  .quote-leave {
+    animation: fadeOutDown 1s ease-out forwards; /* Testimonio sale con efecto fade-out-down */
+  }
+  
+  .container-info {
+    margin-top: 10px;
+  }
+
+  
+  .name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .job {
+    color: #666;
+    font-size: 14px;
+  }
+  
+
+  .testimonial {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+
+  .container-testimonial-data {
+    width: 60px !important;
+    height: 60px !important; 
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain !important;
+        border-radius: 50% !important;
+
+    }
+  }
+
+
+
+  

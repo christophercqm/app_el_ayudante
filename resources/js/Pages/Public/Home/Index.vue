@@ -7,7 +7,7 @@ import Servicios from "@/Components/Home/Servicios.vue";
 import NuestraEsencia from "@/Components/Home/NuestraEsencia.vue";
 import Contactanos from "@/Components/Home/Contactanos.vue";
 import NuestrosProyectos from "@/Components/Home/NuestrosProyectos.vue";
-
+import Resenias from "@/Components/Home/Resenias.vue";
 
 // Recibe las props del controlador (Inertia)
 const props = defineProps({
@@ -54,6 +54,9 @@ const props = defineProps({
             <Contactanos />
         </div>
 
+        <div class="contain-resenias">
+            <Resenias />
+        </div>
        
     </div>
 </template>

@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6 order-2 order-md-1">
                     <div class="single_about_thumb_inner">
-                        <img :src=asesoria alt="Imagen Asesoria" />
+                        <img :src=asesoria alt="Imagen Asesoria" style="max-width: 540px" />
                     </div>
                     <div class="single_about_shape">
                         <div class="single_about_shape_thumb bounce-animate">
