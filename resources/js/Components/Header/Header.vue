@@ -11,7 +11,7 @@ const isTopBarVisible = ref(true); // Para manejar la visibilidad de la top-bar
 const handleScroll = () => {
   // Comprobar si el usuario ha hecho scroll
   isScrolled.value = window.scrollY > 10;
-  
+
   // Ocultar top-bar cuando se haga scroll
   isTopBarVisible.value = window.scrollY === 0;
 };
@@ -71,7 +71,7 @@ onBeforeUnmount(() => {
           <div class="col-3">
             <div class="logo w-100">
               <Link href="/">
-                <img :src="logo" alt="ElAyudante" class="logo-img img-fluid" />
+              <img :src="logo" alt="ElAyudante" class="logo-img img-fluid" />
               </Link>
             </div>
           </div>
@@ -92,22 +92,3 @@ onBeforeUnmount(() => {
     </nav>
   </header>
 </template>
-
-<style scoped>
-/* Cuando el navbar se vuelve fijo */
-.navbar-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff; 
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: top 0.3s ease-in-out; 
-}
-
-/* Para que el contenido no quede debajo del navbar */
-body {
-  padding-top: 60px; 
-}
-</style>

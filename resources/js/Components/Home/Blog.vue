@@ -59,9 +59,9 @@ const normalizedBlogs = computed(() =>
                         </div>
                         <div class="single_blog_content px-4">
                             <div class="techno_blog_meta">
-                                <a href="#" class="text-muted author"
-                                    >{{ blog.author }} |
-                                </a>
+                                <span class="author">
+                                    {{ blog.author }} |
+                                </span>
                                 <span class="meta-date pl-3">{{
                                     blog.date
                                 }}</span>

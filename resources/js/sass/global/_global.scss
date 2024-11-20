@@ -5,14 +5,28 @@
 @font-face {
     font-family: 'Muli';
     src: url('/fonts/muli/Muli-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: normal; /* 400 */
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Muli';
     src: url('/fonts/muli/Muli-Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-weight: bold; /* 700 */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('/fonts/muli/Muli-ExtraBold.ttf') format('truetype');
+    font-weight: 800; /* ExtraBold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('/fonts/muli/Muli-Black.ttf') format('truetype');
+    font-weight: 900; /* Black */
     font-style: normal;
 }
 
