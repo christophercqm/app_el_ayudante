@@ -38,10 +38,24 @@ createInertiaApp({
         return page;
     },
     setup({ el, App, props, plugin }) {
-        return createApp({ render: () => h(App, props) })
+        const app = createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
             .mount(el);
+
+        // Enviar eventos a Google Tag Manager después de cada navegación
+        document.addEventListener('inertia:navigate', () => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'pageview',
+                page: {
+                    url: window.location.pathname,
+                    title: document.title,
+                },
+            });
+        });
+
+        return app;
     },
     progress: {
         color: '#4B5563',

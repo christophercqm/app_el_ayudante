@@ -57,24 +57,40 @@ const props = defineProps({
                         ]"
                         class="w-100 d-flex flex-column align-items-start"
                     >
-                    
-                            <!-- Mostrar solo el title1Big en el primer slide -->
-                            <h2 v-if="index === 0" class="title-big m-0">
-                                {{ slide.title1Big }}
-                            </h2>
+                        <div class="container">
+                            <div class="row">
+                                <div
+                                    class="col d-flex flex-column align-items-start"
+                                >
+                                    <!-- Mostrar solo el title1Big en el primer slide -->
+                                    <h2
+                                        v-if="index === 0"
+                                        class="title-big m-0"
+                                    >
+                                        {{ slide.title1Big }}
+                                    </h2>
 
+                                    <p class="text-alt mb-4">{{ slide.alt }}</p>
+                                    <div class="conten-title">
+                                        <h2 class="slide-title m-0">
+                                            {{ slide.title }}
+                                        </h2>
+                                        <h2
+                                            class="slide-description m-0 text-start"
+                                        >
+                                            {{ slide.description }}
+                                        </h2>
+                                    </div>
 
-                        <p class="text-alt mb-4">{{ slide.alt }}</p>
-                        <div class="conten-title">
-                            <h2 class="slide-title m-0">{{ slide.title }}</h2>
-                            <h2 class="slide-description m-0 text-start">
-                                {{ slide.description }}
-                            </h2>
+                                    <!-- BTN -->
+                                    <a
+                                        :href="slide.buttonLink"
+                                        class="btn text-uppercase text-white mt-5"
+                                        >{{ slide.button }}</a
+                                    >
+                                </div>
+                            </div>
                         </div>
-
-
-                       <!-- BTN -->
-                        <a :href="slide.buttonLink" class="btn text-uppercase text-white mt-5">{{ slide.button }}</a>
                     </div>
                 </div>
             </SwiperSlide>
@@ -136,13 +152,13 @@ const props = defineProps({
     color: white !important;
 }
 
-.slide-1 a{
-    background: #488F2B;
+.slide-1 a {
+    background: #488f2b;
     padding: 16px 32px;
     font-size: 18px;
     font-weight: 500;
     display: inline-block;
-    transition: .5s;
+    transition: 0.5s;
     position: relative;
     overflow: hidden;
     z-index: 44;
@@ -150,13 +166,13 @@ const props = defineProps({
     color: #fff;
 }
 
-.slide-2 a{
-    background: #0A5624;
+.slide-2 a {
+    background: #0a5624;
     padding: 16px 32px;
     font-size: 18px;
     font-weight: 500;
     display: inline-block;
-    transition: .5s;
+    transition: 0.5s;
     position: relative;
     overflow: hidden;
     z-index: 44;
